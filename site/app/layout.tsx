@@ -13,7 +13,15 @@ export const metadata: Metadata = {
   creator: 'Philosophy Forge',
   publisher: 'Philosophy Forge',
   alternates: { canonical: '/' },
-  icons: { icon: '/queens-regalia-icon.png', apple: '/queens-regalia-icon.png' },
+  manifest: '/site.webmanifest?v=2',
+  icons: {
+    icon: [
+      { url: '/favicon-32.png?v=2', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon.ico?v=2', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico?v=2',
+    apple: { url: '/apple-touch-icon.png?v=2', type: 'image/png', sizes: '180x180' },
+  },
   openGraph: {
     type: 'website',
     url: '/',
