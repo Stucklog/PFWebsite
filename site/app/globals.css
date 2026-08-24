@@ -233,6 +233,7 @@ img { max-width: 100%; }
 .article-content section { scroll-margin-top: 30px; }
 .article-content h2 { margin: 0; font-family: var(--serif); font-size: clamp(36px, 4vw, 52px); font-weight: 500; letter-spacing: -.035em; }
 .article-content > section > p:not(.section-label, .privacy-reminder) { color: var(--ink-soft); line-height: 1.75; }
+.article-content > section a:not(.button) { color: #745012; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .step-list { margin: 38px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
 .step-list li { padding: 24px 0; display: grid; grid-template-columns: 42px 1fr; gap: 20px; border-bottom: 1px solid var(--rule); }
 .step-list li > span { width: 32px; height: 32px; display: grid; place-items: center; color: var(--night); background: var(--gold); font: 800 12px/1 var(--mono); }

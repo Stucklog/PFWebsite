@@ -26,7 +26,7 @@ export default function SupportPage() {
             <p className="section-label">Apps</p>
             <h2 id="support-apps-title">What can we help with?</h2>
           </div>
-          <Link className="support-app-card" href="/apps/queens-regalia/support/">
+          <Link className="support-app-card" href="/queens-regalia-support/">
             <img src="/queens-regalia-icon.png" alt="" width="96" height="96" />
             <div><h3>Queen&apos;s Regalia</h3><p>Help, feedback, and privacy information for Queen&apos;s Regalia.</p></div>
             <span aria-hidden="true">→</span>

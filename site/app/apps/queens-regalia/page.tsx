@@ -33,7 +33,7 @@ export default function QueensRegaliaPage() {
                 <a className="button button-primary" href="https://queensregalia.com/" target="_blank" rel="noreferrer">
                   Play on the web <span aria-hidden="true">↗</span>
                 </a>
-                <Link className="button button-quiet" href="/apps/queens-regalia/support/">Get support</Link>
+                <Link className="button button-quiet" href="/queens-regalia-support/">Get support</Link>
               </div>
               <p className="availability-note">Mobile store release details will be added when confirmed.</p>
             </div>
@@ -80,8 +80,8 @@ export default function QueensRegaliaPage() {
           <div><p className="section-label">Official links</p><h2>Everything in one place.</h2></div>
           <div className="link-cards">
             <a href="https://queensregalia.com/" target="_blank" rel="noreferrer"><span>Play Queen&apos;s Regalia</span><small>Launch the web build</small><b aria-hidden="true">↗</b></a>
-            <Link href="/apps/queens-regalia/support/"><span>Support</span><small>Troubleshooting and contact</small><b aria-hidden="true">→</b></Link>
-            <Link href="/apps/queens-regalia/privacy/"><span>Privacy policy</span><small>How information is handled</small><b aria-hidden="true">→</b></Link>
+            <Link href="/queens-regalia-support/"><span>Support</span><small>Troubleshooting and contact</small><b aria-hidden="true">→</b></Link>
+            <Link href="/queens-regalia-privacy/"><span>Privacy policy</span><small>How information is handled</small><b aria-hidden="true">→</b></Link>
           </div>
         </div>
       </section>

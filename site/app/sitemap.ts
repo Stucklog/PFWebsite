@@ -5,8 +5,8 @@ export const dynamic = 'force-static';
 const pages = [
   '',
   '/apps/queens-regalia/',
-  '/apps/queens-regalia/support/',
-  '/apps/queens-regalia/privacy/',
+  '/queens-regalia-support/',
+  '/queens-regalia-privacy/',
   '/support/',
   '/privacy/',
 ];

@@ -20,13 +20,13 @@ export function SiteFooter() {
         <div className="footer-column">
           <h2>Help</h2>
           <Link href="/support/">Support</Link>
-          <Link href="/apps/queens-regalia/support/">Queen&apos;s Regalia support</Link>
+          <Link href="/queens-regalia-support/">Queen&apos;s Regalia support</Link>
         </div>
 
         <div className="footer-column">
           <h2>Legal</h2>
           <Link href="/privacy/">Website privacy</Link>
-          <Link href="/apps/queens-regalia/privacy/">Queen&apos;s Regalia privacy</Link>
+          <Link href="/queens-regalia-privacy/">Queen&apos;s Regalia privacy</Link>
         </div>
       </div>
 
