@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: "Regalia Pixel";
+  src: url("/fonts/PixelifySans-Variable.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
 :root {
   --night: #151d3b;
   --night-deep: #0b1026;
@@ -201,6 +209,107 @@ img { max-width: 100%; }
 .link-cards small { color: #9098b5; }
 .link-cards b { color: var(--gold); font-size: 20px; font-weight: 400; }
 
+.regalia-page {
+  --regalia-surface: #253052;
+  --regalia-ivory: #fff3dc;
+  --regalia-cyan: #77bdd8;
+  position: relative;
+  background: var(--paper);
+}
+.regalia-header-overlay { position: absolute; z-index: 30; inset: 0 0 auto; background: linear-gradient(to bottom, rgb(4 8 23 / 74%), transparent); }
+.regalia-page-hero { min-height: 820px; padding-top: 88px; position: relative; overflow: hidden; color: var(--regalia-ivory); background: var(--night-deep); }
+.regalia-page-hero::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgb(5 9 27 / 96%) 0%, rgb(7 13 35 / 87%) 29%, rgb(8 14 35 / 46%) 56%, rgb(5 9 24 / 11%) 77%), linear-gradient(0deg, rgb(6 10 27 / 74%) 0%, transparent 32%, rgb(5 9 23 / 24%) 100%); }
+.regalia-page-hero::after { content: ""; position: absolute; z-index: 1; inset: auto 0 0; height: 1px; background: rgb(214 175 83 / 58%); }
+.regalia-hero-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.regalia-hero-inner { min-height: 732px; position: relative; z-index: 2; display: flex; align-items: center; }
+.regalia-hero-copy { width: min(100%, 690px); padding-block: 72px 82px; }
+.regalia-hero-copy h1,
+.regalia-rules-copy h2,
+.regalia-worlds-heading h2,
+.regalia-depth-heading h2,
+.regalia-offline-grid h2,
+.regalia-links-grid h2 { font-family: "Regalia Pixel", var(--sans); font-weight: 580; letter-spacing: -.045em; }
+.regalia-hero-copy h1 { margin: 0; font-size: clamp(76px, 9.2vw, 130px); line-height: .8; text-wrap: balance; text-shadow: 0 7px 0 rgb(4 7 19 / 58%), 0 22px 50px rgb(0 0 0 / 34%); }
+.regalia-hero-kicker { margin: 32px 0 0; color: var(--gold); font: 560 clamp(23px, 2.25vw, 31px)/1.2 "Regalia Pixel", var(--sans); letter-spacing: -.02em; }
+.regalia-hero-intro { max-width: 610px; margin: 17px 0 0; color: #c8d1e8; font-size: clamp(17px, 1.55vw, 20px); line-height: 1.65; }
+.regalia-hero-facts { max-width: 620px; margin: 46px 0 0; padding: 22px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; border-top: 1px solid rgb(255 255 255 / 20%); }
+.regalia-hero-facts li { display: flex; flex-direction: column; gap: 5px; }
+.regalia-hero-facts li + li { padding-left: 24px; border-left: 1px solid rgb(255 255 255 / 14%); }
+.regalia-hero-facts strong { color: var(--gold); font: 560 30px/1 "Regalia Pixel", var(--sans); }
+.regalia-hero-facts span { color: #aeb8d4; font-size: 11px; line-height: 1.35; letter-spacing: .06em; text-transform: uppercase; }
+
+.regalia-availability { color: var(--regalia-ivory); background: #080d20; border-bottom: 1px solid rgb(255 255 255 / 9%); }
+.regalia-availability-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.regalia-availability article { min-height: 112px; padding-block: 27px; display: flex; align-items: center; gap: 18px; }
+.regalia-availability article + article { padding-left: 48px; border-left: 1px solid rgb(255 255 255 / 11%); }
+.regalia-status { width: 11px; height: 11px; flex: 0 0 auto; background: #6e7692; box-shadow: 0 0 0 5px rgb(110 118 146 / 12%); rotate: 45deg; }
+.regalia-status-live { background: var(--gold); box-shadow: 0 0 0 5px rgb(214 175 83 / 13%); }
+.regalia-availability p { margin: 0; color: var(--regalia-ivory); font: 560 18px/1.2 "Regalia Pixel", var(--sans); }
+.regalia-availability p span { margin-left: 9px; color: var(--gold); font: 750 9px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.regalia-availability small { display: block; margin-top: 7px; color: #8f99b7; font-size: 12px; line-height: 1.45; }
+
+.regalia-rules-section { padding: 140px 0; scroll-margin-top: 20px; background: var(--paper-light); }
+.regalia-rules-grid { display: grid; grid-template-columns: .88fr 1.12fr; align-items: center; gap: clamp(70px, 9vw, 130px); }
+.regalia-rules-copy h2,
+.regalia-worlds-heading h2,
+.regalia-depth-heading h2,
+.regalia-offline-grid h2,
+.regalia-links-grid h2 { margin: 0; font-size: clamp(48px, 5.6vw, 76px); line-height: .96; }
+.regalia-rules-copy .large-body { margin-top: 27px; font-size: 17px; line-height: 1.75; }
+.regalia-rule-list { margin: 48px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+.regalia-rule-list li { padding: 19px 0; display: grid; grid-template-columns: 42px 1fr; gap: 18px; border-bottom: 1px solid var(--rule); }
+.regalia-rule-list li > span { padding-top: 4px; color: var(--gold-deep); font: 750 10px/1 var(--mono); }
+.regalia-rule-list h3 { margin: 0; font: 560 21px/1.1 "Regalia Pixel", var(--sans); letter-spacing: -.02em; }
+.regalia-rule-list p { margin: 5px 0 0; color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+.regalia-board-figure { margin: 0; }
+.regalia-board-frame { padding: 18px; background: #080d20; border: 1px solid #364770; box-shadow: 18px 18px 0 #d4c9b5, 0 30px 70px rgb(28 31 43 / 16%); }
+.regalia-board-frame img { width: 100%; height: auto; display: block; image-rendering: pixelated; }
+.regalia-board-figure figcaption { margin-top: 28px; padding-left: 18px; color: #7d776b; font: 700 10px/1.5 var(--mono); letter-spacing: .09em; text-transform: uppercase; border-left: 2px solid var(--gold); }
+
+.regalia-worlds-section { padding: 140px 0 120px; overflow: hidden; color: var(--regalia-ivory); background: #0a1026; }
+.regalia-worlds-section .section-label,
+.regalia-links-section .section-label { color: var(--gold); }
+.regalia-worlds-heading { display: grid; grid-template-columns: 1.18fr .82fr; align-items: end; gap: clamp(60px, 9vw, 130px); }
+.regalia-worlds-heading > p { margin: 0 0 5px; color: #aeb8d4; font-size: 17px; line-height: 1.75; }
+.regalia-stats { margin: 84px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgb(255 255 255 / 16%); border-bottom: 1px solid rgb(255 255 255 / 16%); }
+.regalia-stats div { padding: 30px 24px 28px; }
+.regalia-stats div:first-child { padding-left: 0; }
+.regalia-stats div + div { border-left: 1px solid rgb(255 255 255 / 12%); }
+.regalia-stats dt { color: var(--gold); font: 560 clamp(42px, 5vw, 64px)/.9 "Regalia Pixel", var(--sans); }
+.regalia-stats dd { margin: 11px 0 0; color: #9aa5c3; font: 700 10px/1.4 var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+.regalia-edition-note { max-width: 750px; margin: 25px 0 0; color: #7984a2; font-size: 12px; line-height: 1.65; }
+.regalia-shot-rail { margin-top: 86px; padding: 4px max(32px, calc((100vw - 1200px) / 2)) 28px; display: flex; gap: 28px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: inline mandatory; scrollbar-width: thin; scrollbar-color: var(--gold) rgb(255 255 255 / 8%); }
+.regalia-shot-rail:focus-visible { outline: 3px solid var(--regalia-cyan); outline-offset: -3px; }
+.regalia-shot-card { width: min(300px, 76vw); flex: 0 0 auto; margin: 0; padding-top: 38px; position: relative; scroll-snap-align: start; }
+.regalia-shot-number { position: absolute; top: 0; left: 0; color: var(--gold); font: 700 10px/1 var(--mono); letter-spacing: .12em; }
+.regalia-shot-card img { width: 100%; height: auto; display: block; border: 1px solid rgb(119 189 216 / 44%); box-shadow: 11px 11px 0 #040818; }
+.regalia-shot-card figcaption { padding: 25px 3px 0; }
+.regalia-shot-card h3 { margin: 0; font: 560 26px/1.1 "Regalia Pixel", var(--sans); letter-spacing: -.025em; }
+.regalia-shot-card p { margin: 9px 0 0; color: #929dbb; font-size: 13px; line-height: 1.55; }
+
+.regalia-depth-section { padding: 140px 0; background: var(--paper); }
+.regalia-depth-heading { max-width: 820px; }
+.regalia-depth-grid { margin-top: 78px; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--rule); }
+.regalia-depth-grid article { min-height: 390px; padding: 32px; position: relative; }
+.regalia-depth-grid article + article { border-left: 1px solid var(--rule); }
+.regalia-depth-grid article > span { position: absolute; top: 28px; right: 28px; width: 42px; height: 42px; display: grid; place-items: center; color: var(--night); background: var(--gold); box-shadow: 4px 4px 0 var(--gold-deep); font: 620 17px/1 "Regalia Pixel", var(--sans); }
+.regalia-card-kicker { margin: 0; color: var(--gold-deep); font: 750 10px/1.4 var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.regalia-depth-grid h3 { margin: 126px 0 18px; font: 560 30px/1.05 "Regalia Pixel", var(--sans); letter-spacing: -.03em; }
+.regalia-depth-grid article > p:last-child { margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.7; }
+
+.regalia-offline-section { padding: 120px 0; background: #e3ebec; border-block: 1px solid #c6d2d5; }
+.regalia-offline-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: start; gap: clamp(70px, 10vw, 140px); }
+.regalia-offline-grid > div > p:not(.section-label) { max-width: 640px; margin: 28px 0; color: #55636b; font-size: 17px; line-height: 1.75; }
+.regalia-offline-grid ul { margin: 5px 0 0; padding: 0; list-style: none; border-top: 1px solid #b9c6c9; }
+.regalia-offline-grid li { min-height: 70px; padding: 20px 0; display: grid; grid-template-columns: 48px 1fr; align-items: center; border-bottom: 1px solid #b9c6c9; }
+.regalia-offline-grid li span { color: var(--gold-deep); font: 750 10px/1 var(--mono); }
+.regalia-offline-grid li strong { color: #263138; font-size: 14px; }
+
+.regalia-links-section { padding: 125px 0; color: var(--regalia-ivory); background: var(--night); }
+.regalia-links-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(65px, 9vw, 120px); }
+.regalia-links-grid > div:first-child > p:last-child { max-width: 430px; margin: 25px 0 0; color: #aeb8d4; font-size: 16px; line-height: 1.65; }
+.regalia-links-section .link-cards a > span { font-family: "Regalia Pixel", var(--sans); font-weight: 560; letter-spacing: -.02em; }
+
 .content-hero { padding-block: 110px 120px; border-bottom: 1px solid var(--rule); }
 .content-hero h1 { max-width: 900px; color: var(--night); }
 .content-hero > p:last-child { max-width: 610px; margin: 34px 0 0; color: var(--ink-soft); font-size: 19px; line-height: 1.7; }
@@ -288,6 +397,18 @@ img { max-width: 100%; }
   .article-layout, .legal-layout { grid-template-columns: 1fr; gap: 55px; }
   .article-aside { position: static; padding-bottom: 25px; border-bottom: 1px solid var(--rule); }
   .legal-layout aside { max-width: 520px; }
+  .regalia-page-hero::before { background: linear-gradient(90deg, rgb(5 9 27 / 96%) 0%, rgb(7 13 35 / 84%) 48%, rgb(5 9 24 / 29%) 100%), linear-gradient(0deg, rgb(6 10 27 / 78%) 0%, transparent 38%); }
+  .regalia-hero-art { object-position: 62% center; }
+  .regalia-rules-grid,
+  .regalia-worlds-heading,
+  .regalia-offline-grid,
+  .regalia-links-grid { grid-template-columns: 1fr; }
+  .regalia-rules-grid { gap: 80px; }
+  .regalia-board-figure { width: min(100%, 640px); margin-inline: auto; }
+  .regalia-worlds-heading,
+  .regalia-offline-grid,
+  .regalia-links-grid { gap: 58px; }
+  .regalia-worlds-heading > p { max-width: 720px; }
 }
 
 @media (max-width: 700px) {
@@ -321,6 +442,44 @@ img { max-width: 100%; }
   .article-layout, .legal-layout { padding-block: 60px 95px; }
   .legal-hero { padding-block: 70px 58px; }
   .policy-notice { margin-inline: 20px; width: auto; }
+  .regalia-page-hero { min-height: 790px; padding-top: 80px; }
+  .regalia-page-hero::before { background: linear-gradient(90deg, rgb(5 9 27 / 95%), rgb(7 13 35 / 74%)), linear-gradient(0deg, rgb(6 10 27 / 88%) 0%, transparent 45%); }
+  .regalia-hero-art { object-position: 67% center; }
+  .regalia-hero-inner { min-height: 710px; }
+  .regalia-hero-copy { padding-block: 74px 55px; }
+  .regalia-hero-copy h1 { font-size: clamp(70px, 20vw, 98px); }
+  .regalia-hero-kicker { margin-top: 28px; font-size: 23px; }
+  .regalia-hero-facts { margin-top: 38px; }
+  .regalia-hero-facts li + li { padding-left: 13px; }
+  .regalia-hero-facts strong { font-size: 25px; }
+  .regalia-hero-facts span { font-size: 9px; }
+  .regalia-availability-grid { grid-template-columns: 1fr; }
+  .regalia-availability article { min-height: 105px; }
+  .regalia-availability article + article { padding-left: 0; border-top: 1px solid rgb(255 255 255 / 11%); border-left: 0; }
+  .regalia-rules-section,
+  .regalia-worlds-section,
+  .regalia-depth-section,
+  .regalia-offline-section,
+  .regalia-links-section { padding-block: 92px; }
+  .regalia-rules-copy h2,
+  .regalia-worlds-heading h2,
+  .regalia-depth-heading h2,
+  .regalia-offline-grid h2,
+  .regalia-links-grid h2 { font-size: clamp(46px, 13vw, 60px); }
+  .regalia-board-frame { padding: 10px; box-shadow: 11px 11px 0 #d4c9b5; }
+  .regalia-board-figure figcaption { margin-top: 23px; }
+  .regalia-stats { margin-top: 60px; grid-template-columns: repeat(2, 1fr); }
+  .regalia-stats div { padding: 25px 16px; }
+  .regalia-stats div:nth-child(3) { border-left: 0; }
+  .regalia-stats div:nth-child(n+3) { border-top: 1px solid rgb(255 255 255 / 12%); }
+  .regalia-shot-rail { margin-top: 65px; padding-inline: 20px; gap: 20px; }
+  .regalia-shot-card { width: 76vw; }
+  .regalia-depth-grid { margin-top: 58px; grid-template-columns: 1fr; }
+  .regalia-depth-grid article { min-height: 300px; }
+  .regalia-depth-grid article + article { border-top: 1px solid var(--rule); border-left: 0; }
+  .regalia-depth-grid h3 { margin-top: 92px; }
+  .regalia-offline-grid,
+  .regalia-links-grid { gap: 52px; }
 }
 
 @media (max-width: 520px) {
@@ -339,6 +498,19 @@ img { max-width: 100%; }
   .article-app-badge { width: 94px; height: 94px; }
   .article-hero h1, .legal-hero h1 { font-size: 48px; }
   .policy-notice { grid-template-columns: 1fr; }
+  .regalia-page-hero { min-height: 850px; }
+  .regalia-hero-inner { min-height: 770px; }
+  .regalia-hero-copy { padding-top: 88px; }
+  .regalia-hero-copy h1 { font-size: clamp(66px, 21vw, 88px); }
+  .regalia-hero-intro { font-size: 16px; }
+  .regalia-hero-facts { padding-top: 18px; }
+  .regalia-hero-facts li + li { padding-left: 10px; }
+  .regalia-availability p span { display: block; margin: 7px 0 0; }
+  .regalia-rule-list li { grid-template-columns: 34px 1fr; gap: 12px; }
+  .regalia-stats dt { font-size: 45px; }
+  .regalia-shot-card { width: 82vw; }
+  .regalia-depth-grid article { padding: 26px; }
+  .regalia-offline-grid li { grid-template-columns: 42px 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
