@@ -5,6 +5,9 @@ export const dynamic = 'force-static';
 const pages = [
   '',
   '/apps/queens-regalia/',
+  '/pax/privacy/',
+  '/pax/terms/',
+  '/pax/support/',
   '/queens-regalia-support/',
   '/queens-regalia-privacy/',
   '/support/',
@@ -14,8 +17,8 @@ const pages = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.map((path) => ({
     url: `https://philosophy-forge.com${path}`,
-    lastModified: new Date('2026-08-24'),
+    lastModified: new Date('2026-08-26'),
     changeFrequency: path === '' ? 'monthly' : 'yearly',
-    priority: path === '' ? 1 : path.includes('queens-regalia') ? 0.8 : 0.6,
+    priority: path === '' ? 1 : path.includes('queens-regalia') || path.includes('/pax/') ? 0.8 : 0.6,
   }));
 }

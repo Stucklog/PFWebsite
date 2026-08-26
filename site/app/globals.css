@@ -314,6 +314,7 @@ img { max-width: 100%; }
 .content-hero h1 { max-width: 900px; color: var(--night); }
 .content-hero > p:last-child { max-width: 610px; margin: 34px 0 0; color: var(--ink-soft); font-size: 19px; line-height: 1.7; }
 .support-directory { padding-block: 100px 120px; display: grid; grid-template-columns: .7fr 1.3fr; gap: 100px; }
+.support-app-list { display: flex; flex-direction: column; gap: 28px; }
 .directory-heading h2 { font-size: clamp(38px, 4.2vw, 60px); }
 .support-app-card { min-height: 170px; padding: 30px; display: grid; grid-template-columns: 96px 1fr auto; align-items: center; gap: 30px; color: var(--cream); background: var(--night); box-shadow: 10px 10px 0 #cec4b1; transition: transform .18s ease, box-shadow .18s ease; }
 .support-app-card:hover { transform: translate(-2px, -2px); box-shadow: 14px 14px 0 #cec4b1; }

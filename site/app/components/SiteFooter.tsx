@@ -14,18 +14,22 @@ export function SiteFooter() {
 
         <div className="footer-column">
           <h2>Apps</h2>
+          <Link href="/pax/support/">Verse &amp; Vale</Link>
           <Link href="/apps/queens-regalia/">Queen&apos;s Regalia</Link>
         </div>
 
         <div className="footer-column">
           <h2>Help</h2>
           <Link href="/support/">Support</Link>
+          <Link href="/pax/support/">Verse &amp; Vale support</Link>
           <Link href="/queens-regalia-support/">Queen&apos;s Regalia support</Link>
         </div>
 
         <div className="footer-column">
           <h2>Legal</h2>
           <Link href="/privacy/">Website privacy</Link>
+          <Link href="/pax/privacy/">Verse &amp; Vale privacy</Link>
+          <Link href="/pax/terms/">Verse &amp; Vale terms</Link>
           <Link href="/queens-regalia-privacy/">Queen&apos;s Regalia privacy</Link>
         </div>
       </div>
